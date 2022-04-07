@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/app.css" type="text/css" media="screen" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <script src="https://kit.fontawesome.com/d905d0cbda.js" crossorigin="anonymous"></script>
+    <title>My Task Manager</title>
+
+</head>
+<body>
+    <nav class="nav-bar">
+        <h1>My Task Manager</h1>
+    </nav>
+    <main>
+        <section id="sect-list">
+            <div id="task-container">
+
+            </div>
+            <button class="showHide" onClick="hideForm()">Show/Hide</button>
+        </section>
+
+        <section id="sect-form">
+            <h3>Task Information</h3>
+            <h3 id="inputError" class="input-error hide">Must have a Title!</h3>
+            <div class="form">
+                <div class="control">
+                    <label>Importance</label>
+                    <i id="iImportant" class="fas fa-star"></i>
+                </div>
+                <div class="control">
+                    <label>Title:</label>
+                    <input id="txtTitle" type="text"/>
+                </div>
+                <div class="control">
+                    <label>Description:</label>
+                    <textarea id="txtDescription" rows="3"></textarea>
+                </div>
+                <div class="control">
+                    <label>Due Date:</label>
+                    <input id="selDueDate" type="date"/>
+                </div>
+                <div class="control">
+                    <label>Start Date:</label>
+                    <input id="selStartDate" type="date"/>
+                </div>
+
+                <div class="control">
+                    <label>Category:</label>
+                    <select id="selCategory">
+                        <option value="1">Home</option>
+                        <option value="2">Work</option>
+                        <option value="3">Personal</option>
+                        <option value="4">Family</option>
+                    </select>
+                </div>
+                <div class="control">
+                    <label>Color:</label>
+                    <input id="selColor" type="color"/>
+                </div>
+                <div class="control">
+                    <button id="btnSave" class="btn-blue">Register Task:</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/task.js"></script>
+    
+</body>
+</html>
